@@ -9,11 +9,18 @@ class LinkedListTest < Minitest::Test
     assert_instance_of(LinkedList, LinkedList.new('string'))
   end
 
+  # is_empty?: return true if the linked list is empty
+  def test_it_knows_when_its_empty
+    list = LinkedList.new(nil)
+
+    assert_equal(list.is_empty?, true)
+  end
+
   # size: return the length of linked list
   def test_it_knows_its_length
     list = LinkedList.new('string')
 
-    assert_equal(list.size(1))
+    assert_equal(list.size, 1)
   end
   
   # push: given a data, add a new node in the end
@@ -21,10 +28,10 @@ class LinkedListTest < Minitest::Test
     list = LinkedList.new('string')
     list.push('new string')
 
-    assert_equal(list.size(2))
+    assert_equal(list.size, 2)
   end
 
-  # is_empty?: return true if the linked list is empty
+  
   # unshift: add a new node in the front
   # pop: remove the last node and return it
   # shift: remove the first node and return it
