@@ -16,15 +16,31 @@ class LinkedList
     return count
   end
 
-  def push(data)
+  def push(value)
     if @head.is_empty?
-      @head = Node.new(data)
+      @head = Node.new(value)
     else
-      new_node = Node.new(data)
+      current_node = @head
+      new_node = Node.new(value)
+      while current_node.next_node != nil
+        current_node = current_node.next_node
+      end
+      current_node.next_node = new_node
+    end
+  end
+
+  def pretty_print
+    message = []
+
+    if @head.is_empty?
+      return message
+    else
       while @head.next_node != nil
+        message << @head.value
         @head = @head.next_node
       end
-      @head.next_node = new_node
+      message << @head.value
+      return message
     end
   end
 end
