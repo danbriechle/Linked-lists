@@ -25,6 +25,16 @@ class LinkedListTest < Minitest::Test
     assert_equal(list.size, 2)
   end
 
+  # pretty_print: print the current linked list as an array
+  def test_it_can_pretty_print_itself
+    list = LinkedList.new('string')
+    list.push('new string')
+    list.push(1)
+    list.push('1')
+
+    assert_equal(list.pretty_print, ['string', 'new string', 1, '1'])
+  end
+
   
   # unshift: add a new node in the front
   # pop: remove the last node and return it
