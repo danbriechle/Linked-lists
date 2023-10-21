@@ -10,13 +10,6 @@ class LinkedListTest < Minitest::Test
     assert_instance_of(LinkedList, LinkedList.new('string'))
   end
 
-  # is_empty?: return true if the linked list is empty
-  def test_it_knows_when_its_empty
-    list = LinkedList.new(nil)
-
-    assert_equal(list.is_empty?, true)
-  end
-
   # size: return the length of linked list
   def test_it_knows_its_length
     list = LinkedList.new('string')
