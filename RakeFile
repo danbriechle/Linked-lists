@@ -13,4 +13,5 @@ end
 
 task :test do
   ruby 'test/linked_list_test.rb'
+  ruby 'test/node_test.rb'
 end
