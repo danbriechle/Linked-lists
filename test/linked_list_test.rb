@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'pry'
 require 'minitest/autorun'
 require_relative '../app/linked_list'
 require_relative '../app/node'
