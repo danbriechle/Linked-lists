@@ -5,11 +5,9 @@ require_relative '../app/linked_list'
 require_relative '../app/node'
 
 class LinkedListTest < Minitest::Test
-
   def test_it_exists
-    assert_instance_of(LinkedList, LinkedList.new("string"))
+    assert_instance_of(LinkedList, LinkedList.new('string'))
   end
-
 
   # is_empty?: return true if the linked list is empty
   # push: given a data, add a new node in the end
