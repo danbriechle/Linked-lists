@@ -5,12 +5,8 @@ class LinkedList
     @head = Node.new(value, nil)
   end
 
-  def is_empty?
-    @head.value.nil? ? true : false
-  end
-
   def size
-    return 0 if is_empty?
+    return 0 if @head.is_empty?
 
     count = 1
     while @head.next_node != nil
@@ -21,7 +17,7 @@ class LinkedList
   end
 
   def push(data)
-    if is_empty?
+    if @head.is_empty?
       @head = Node.new(data)
     else
       new_node = Node.new(data)
