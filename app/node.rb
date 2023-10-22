@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Node
-  attr_accessor :value, :next_node, :is_empty
+  attr_accessor :value, :next_node
 
   def initialize(value, next_node = nil)
     @value = value
@@ -9,6 +9,6 @@ class Node
   end
 
   def is_empty?
-    @is_empty = @value.nil?
+    @value.nil?
   end
 end
