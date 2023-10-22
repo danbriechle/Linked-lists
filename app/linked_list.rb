@@ -6,7 +6,7 @@ class LinkedList
   end
 
   def size
-    return 0 if @head.is_empty?
+    return 0 if is_empty?
 
     count = 1
     while @head.next_node != nil
@@ -17,7 +17,7 @@ class LinkedList
   end
 
   def push(value)
-    if @head.is_empty?
+    if is_empty?
       @head = Node.new(value)
     else
       current_node = @head
@@ -32,7 +32,7 @@ class LinkedList
   def pretty_print
     message = []
 
-    if @head.is_empty?
+    if is_empty?
       return message
     else
       while @head.next_node != nil
@@ -42,5 +42,13 @@ class LinkedList
       message << @head.value
       return message
     end
+  end
+
+  def is_empty?
+    @head.is_empty?
+  end
+
+  def clear
+    @head.value = nil
   end
 end
