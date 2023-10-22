@@ -32,11 +32,18 @@ class LinkedListTest < Minitest::Test
 
     assert_equal(list.pretty_print, ['string', 'new string', 1, '1'])
   end
-
   
+  # clear: clear the whole linked list
+  def test_it_can_be_cleared
+    list = LinkedList.new('string')
+    list.push('new string')
+    list.clear
+
+    assert_equal(list.is_empty?, true)
+  end
+
+
   # unshift: add a new node in the front
   # pop: remove the last node and return it
   # shift: remove the first node and return it
-  # pretty_print: print the current linked list as an array
-  # clear: clear the whole linked list
 end
