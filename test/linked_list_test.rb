@@ -28,9 +28,7 @@ class LinkedListTest < Minitest::Test
   # pretty_print: print the current linked list as an array
   def test_it_can_pretty_print_itself
     list = LinkedList.new('string')
-    list.push('new string')
-    list.push(1)
-    list.push('1')
+    ['new string', 1, '1'].each{ |data| list.push(data) }
 
     assert_equal(list.pretty_print, ['string', 'new string', 1, '1'])
   end
